@@ -154,6 +154,25 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/sounar97/sql-data-analysis",
   },
+  {
+    name: "Bike Rental Prediction",
+    description:
+      "In this project, Azure AutoML is used to explore various algorithms and preprocessing techniques to find the best model for bike rental prediction.",
+    tags: [
+      
+      {
+        name: "MachineLearning",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MicrosoftAzure",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/sounar97/Future-Ready-Talent",
+  },
+
   
   
   
