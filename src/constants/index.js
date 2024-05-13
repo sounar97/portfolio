@@ -8,7 +8,6 @@ import {
   html,
   css,
   reactjs,
-  
   tailwind,
   nodejs,
   mongodb,
@@ -20,9 +19,11 @@ import {
   tesla,
   shopify,
   carrent,
-  microsoft,
-  
+  microsoft, 
   threejs,
+  bikes,
+  chest,
+  youtube,
 } from "../assets";
 
 export const navLinks = [
@@ -135,7 +136,23 @@ const testimonials = [
       "An Introduction to Machine Learning: A Simple Overview",
     name: "https://sounar.hashnode.dev/an-introduction-to-machine-learning-a-simple-overview",
   },
-  
+  {
+    testimonial:
+      "Revolutionizing Food Production: The Importance of Vertical Farming and the Role of AI in Enhancing Its Efficiency",
+    name: "https://sounar.hashnode.dev/revolutionizing-food-production-the-importance-of-vertical-farming-and-the-role-of-ai-in-enhancing-its-efficiency",
+  },
+  {
+    testimonial:
+      "How AI Can Improve Customer Support and Accountability",
+    name: "https://sounar.hashnode.dev/how-ai-can-improve-customer-support-and-accountability",
+  },
+  {
+    testimonial:
+      "Human voice and tech",
+    name: "https://sounar.hashnode.dev/human-voice-and-tech",
+  },
+ 
+ 
  
 ];
 
@@ -169,8 +186,51 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: bikes,
     source_code_link: "https://github.com/sounar97/Future-Ready-Talent",
+  },
+  {
+    name: "Chest-Cancer Classification",
+    description:
+      "In this project, using Deep Learnig Techniques tried to do Chest-Cancer-Classification-Using-MLflow and deploying in cloud .",
+    tags: [
+      
+      {
+        name: "DeepLearning",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MicrosoftAzure",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Mlflow",
+        color: "pink-text-gradient",
+      },
+      
+    ],
+    image: chest,
+    source_code_link: "https://github.com/sounar97/Chest-Cancer-Classification-Using-MLflow",
+  },
+  {
+    name: "Youtube 2.0",
+    description:
+      "In this project, using Deep Learnig Techniques tried to do Chest-Cancer-Classification-Using-MLflow and deploying in cloud .",
+    tags: [
+      
+      {
+        name: "ReactJS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "RapidAPI",
+        color: "pink-text-gradient",
+      },
+      
+      
+    ],
+    image: youtube,
+    source_code_link: "https://github.com/sounar97/Youtube-2.0",
   },
 
   

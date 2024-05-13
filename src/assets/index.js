@@ -27,7 +27,9 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import microsoft from "./company/microsoft.png";
 import carrent from "./carrent.png";
-
+import bikes from "./bikes.png";
+import chest from "./chest.jpeg";
+import youtube from "./youtube.png";
 
 export {
   logo,
@@ -57,5 +59,7 @@ export {
   tesla,
   carrent,
   microsoft,
- 
+  bikes,
+  youtube,
+  chest,
 };
