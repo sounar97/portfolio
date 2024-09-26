@@ -215,7 +215,7 @@ const projects = [
   {
     name: "Youtube 2.0",
     description:
-      "In this project, using Deep Learnig Techniques tried to do Chest-Cancer-Classification-Using-MLflow and deploying in cloud .",
+      "In this project, Inspired from JavaScript Mastery tutorial using RapidAPI and ReactJS created Youtube Clone .",
     tags: [
       
       {
