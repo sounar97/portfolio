@@ -30,6 +30,8 @@ import carrent from "./carrent.png";
 import bikes from "./bikes.png";
 import chest from "./chest.jpeg";
 import youtube from "./youtube.png";
+import ysip from "./ysip.jpeg";
+import fms from "./fms.jpeg";
 
 export {
   logo,
@@ -62,4 +64,6 @@ export {
   bikes,
   youtube,
   chest,
+  ysip,
+  fms,
 };

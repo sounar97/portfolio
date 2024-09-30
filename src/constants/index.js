@@ -24,6 +24,8 @@ import {
   bikes,
   chest,
   youtube,
+  ysip,
+  fms,
 } from "../assets";
 
 export const navLinks = [
@@ -34,6 +36,14 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "testimonials",
+    title: "Blogs",
   },
   {
     id: "contact",
@@ -47,7 +57,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Moblie Application Developer",
     icon: mobile,
   },
   {
@@ -158,6 +168,48 @@ const testimonials = [
 
 const projects = [
   {
+    name: "YouTube Summary Into PDF",
+    description:
+      "In this project, it will convert Youtube Summary into PDF using Gemini API",
+    tags: [
+      {
+        name: "Gemini API",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Python(Flask)",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ysip,
+    source_code_link: "https://github.com/sounar97/Youtube-Summary-PDF",
+  },
+  {
+    name: "File Management System",
+    description:
+      "A comprehensive file management system built using Java and MySQL.",
+    tags: [
+      {
+        name: "Java",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MySQL",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Apache Tomcat",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: fms,
+    source_code_link: "https://github.com/sounar97/FilesMangement-Using-Java-And-MYSQL",
+  },
+  {
     name: "Analysis of the world population in 2015",
     description:
       "In this project, we'll work with data from the CIA World Factbook, a compendium of statistics about all of the countries on Earth",
@@ -190,32 +242,9 @@ const projects = [
     source_code_link: "https://github.com/sounar97/Future-Ready-Talent",
   },
   {
-    name: "Chest-Cancer Classification",
-    description:
-      "In this project, using Deep Learnig Techniques tried to do Chest-Cancer-Classification-Using-MLflow and deploying in cloud .",
-    tags: [
-      
-      {
-        name: "DeepLearning",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MicrosoftAzure",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Mlflow",
-        color: "pink-text-gradient",
-      },
-      
-    ],
-    image: chest,
-    source_code_link: "https://github.com/sounar97/Chest-Cancer-Classification-Using-MLflow",
-  },
-  {
     name: "Youtube 2.0",
     description:
-      "In this project, using Deep Learnig Techniques tried to do Chest-Cancer-Classification-Using-MLflow and deploying in cloud .",
+      "In this project, I've created Youtube Clone inspired from JSMastery tutorial",
     tags: [
       
       {
