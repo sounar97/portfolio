@@ -15,43 +15,89 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
+  // Check if the device is mobile
+  const isMobile = window.innerWidth < 768;
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg- p-5 rounded-2xl sm:w-[300px] w-full bg-blue"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
+      {!isMobile ? (
+        <Tilt
+          options={{ max: 45, scale: 1, speed: 450 }}
+          className="p-5 rounded-2xl w-full md:w-[350px] bg-tertiary"
+        >
+          <div className="relative w-full h-[200px] md:h-[230px]">
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[20px] md:text-[24px]">
+              {name}
+            </h3>
+            <p className="mt-2 text-secondary text-[12px] md:text-[14px]">
+              {description}
             </p>
-          ))}
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[12px] md:text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </Tilt>
+      ) : (
+        <div className="p-5 rounded-2xl w-full md:w-[275px] bg-tertiary">
+          <div className="relative w-full h-[200px]">
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[20px] md:text-[24px]">
+              {name}
+            </h3>
+            <p className="mt-2 text-secondary text-[12px] md:text-[14px]">
+              {description}
+            </p>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[12px] md:text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
         </div>
-      </Tilt>
+      )}
     </motion.div>
   );
 };
@@ -67,9 +113,9 @@ const Works = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-gray-700 text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-gray-700 text-[15px] md:text-[17px] max-w-3xl leading-[25px] md:leading-[30px]"
         >
-          Following projects showcases my skills and experience through
+          Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
@@ -77,7 +123,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-4 md:gap-7 overflow-hidden">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
